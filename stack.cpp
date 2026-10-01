@@ -15,20 +15,16 @@ void visitPage(string page) {
     if (isFull()) { 
         cout << "Stack Overflow!" << endl; return; 
     }
-
     historyStack[++top] = page;
     cout << "Visited: " << page << endl;
 }
 
 void goBack() {
-
     if (isEmpty()) { 
         cout << "Stack Underflow!" << endl; return; 
     }
-
     cout << "Back from: " << historyStack[top] << endl;
     top--;
-    
     if (!isEmpty()){
         cout << "Current Page: " << historyStack[top] << endl;
     }
